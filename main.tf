@@ -14,6 +14,7 @@ resource authentik_provider_proxy "proxy_provider" {
   name = "${title(var.applications[count.index].slug)}Proxy"
   external_host = var.applications[count.index].external_host
   authorization_flow = var.applications[count.index].authorization_flow_id
+  mode = var.applications[count.index].mode
 }
 
 resource authentik_group "ldap_application_users" {

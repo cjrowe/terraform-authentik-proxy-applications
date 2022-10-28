@@ -14,6 +14,7 @@ variable "applications" {
     slug = string
     external_host = string
     authorization_flow_id = string
+    mode = string
     app_config = map(string)
     user_ids = list(string)
   }))
